@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2>Dashboard</h2>
+    <a href="{% url 'add_task' %}">Add Task</a>
+    <h3>Your Tasks:</h3>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task.name }} - {{ task.status }} - {{ task.date_time }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
